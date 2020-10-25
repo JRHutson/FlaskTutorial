@@ -28,6 +28,11 @@
 
             <div class="row">
                 <form action="." method="POST">
+                    {% if error %}
+                        <div class="alert alert-warning" role="alert">
+                            Incorrect username or password
+                        </div>
+                    {% endif %}
                   <div class="form-group">
                     <label for="username">Username:</label>
                     <input class="form-control" id="username" name="username" placeholder="Enter your username">
